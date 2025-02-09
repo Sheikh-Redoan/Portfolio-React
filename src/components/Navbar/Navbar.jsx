@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 import Container from "../Container/Container";
 import logo from "../../assets/LOGO.png";
 import { IoIosCall } from "react-icons/io";
@@ -30,27 +31,64 @@ const Navbar = ({ className }) => {
           <div className="hidden md:flex gap-[28px] items-center">
             <ul className="flex gap-[28px]">
               <li className="text-white font-dm text-[18px] md:text-[20px] font-bold leading-normal">
-                <a href="#">Home</a>
+                <Link
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer hover:text-[#06E0FA] transition-colors"
+                >
+                  Home
+                </Link>
               </li>
               <li className="text-[#909090] font-dm text-[18px] md:text-[20px] font-bold leading-normal hover:text-white">
-                <a href="#">About</a>
+                <Link
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer hover:text-[#06E0FA] transition-colors"
+                >
+                  About
+                </Link>
               </li>
               <li className="text-[#909090] font-dm text-[18px] md:text-[20px] font-bold leading-normal hover:text-white">
-                <a href="#">Services</a>
+                <Link
+                  to="services"
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer hover:text-[#06E0FA] transition-colors"
+                >
+                  Services
+                </Link>
               </li>
               <li className="text-[#909090] font-dm text-[18px] md:text-[20px] font-bold leading-normal hover:text-white">
-                <a href="#">Projects</a>
+                <Link
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer hover:text-[#06E0FA] transition-colors"
+                >
+                  Projects
+                </Link>
               </li>
               <li className="text-[#909090] font-dm text-[18px] md:text-[20px] font-bold leading-normal hover:text-white">
-                <a href="#">Blog</a>
+                <Link
+                  to="blog"
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer hover:text-[#06E0FA] transition-colors"
+                >
+                  Blog
+                </Link>
               </li>
             </ul>
-            <a
-              className="py-[10px] px-[30px] md:py-[14px] md:px-[44px] text-white font-dm text-[18px] md:text-[20px] font-bold leading-normal flex gap-[7px] justify-center items-center rounded-[50px] border border-[#282CAF] bg-[#041118]"
-              href="#"
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="py-[10px] px-[30px] md:py-[14px] md:px-[44px] text-white font-dm text-[18px] md:text-[20px] font-bold leading-normal flex gap-[7px] justify-center items-center rounded-[50px] border border-[#282CAF] bg-[#041118] cursor-pointer hover:bg-[#1F64B9] transition-colors"
             >
               Contact <IoIosCall className="text-[20px] md:text-[25px] text-white" />
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Toggler */}
@@ -82,58 +120,70 @@ const Navbar = ({ className }) => {
           <div className="text-center">
             <ul className="flex flex-col gap-8">
               <li>
-                <a
-                  href="#"
-                  className="text-white text-4xl font-bold hover:text-[#06E0FA]"
+                <Link
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  className="text-white text-4xl font-bold hover:text-[#06E0FA] cursor-pointer"
                   onClick={closeMenu}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-white text-4xl font-bold hover:text-[#06E0FA]"
+                <Link
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  className="text-white text-4xl font-bold hover:text-[#06E0FA] cursor-pointer"
                   onClick={closeMenu}
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-white text-4xl font-bold hover:text-[#06E0FA]"
+                <Link
+                  to="services"
+                  smooth={true}
+                  duration={500}
+                  className="text-white text-4xl font-bold hover:text-[#06E0FA] cursor-pointer"
                   onClick={closeMenu}
                 >
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-white text-4xl font-bold hover:text-[#06E0FA]"
+                <Link
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  className="text-white text-4xl font-bold hover:text-[#06E0FA] cursor-pointer"
                   onClick={closeMenu}
                 >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-white text-4xl font-bold hover:text-[#06E0FA]"
+                <Link
+                  to="blog"
+                  smooth={true}
+                  duration={500}
+                  className="text-white text-4xl font-bold hover:text-[#06E0FA] cursor-pointer"
                   onClick={closeMenu}
                 >
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
-            <a
-              className="mt-8 py-[14px] px-[44px] text-white font-dm text-[20px] font-bold leading-normal flex gap-[7px] justify-center items-center rounded-[50px] border border-[#282CAF] bg-[#1F64B9]"
-              href="#"
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="mt-8 py-[14px] px-[44px] text-white font-dm text-[20px] font-bold leading-normal flex gap-[7px] justify-center items-center rounded-[50px] border border-[#282CAF] bg-[#1F64B9] cursor-pointer hover:bg-[#06E0FA] transition-colors"
               onClick={closeMenu}
             >
               Contact <IoIosCall className="text-[25px] text-white" />
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

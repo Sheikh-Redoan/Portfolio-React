@@ -8,9 +8,9 @@ import ServiceLogo6 from '../../assets/ServiceLogo6.png'
 
 import Container from "../Container/Container";
 
-const Services = ({ className }) => {
+const Services = ({ className,id }) => {
   return (
-    <div className={`bg-[#040404] ${className}`}>
+    <div id={`${id}`} className={`bg-[#040404] ${className}`}>
       <Container>
         <div className="flex justify-center">
           <h2 className="text-white text-[40px] md:text-[60px] not-italic font-bold leading-[1.2] capitalize mb-4 md:mb-[30px] max-sm:flex max-sm:gap-[10px]">

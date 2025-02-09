@@ -6,9 +6,9 @@ import aboutIcon from "../../assets/abouticon.png";
 import downloadIcon from "../../assets/DownloadIcon.png";
 import listArrow from "../../assets/listArrow.png";
 
-const About = ({ className }) => {
+const About = ({ className,id }) => {
   return (
-    <div className={`bg-[#040404] ${className}`}>
+    <div id={`${id}`} className={`bg-[#040404] ${className}`}>
       <Container>
         <div className="flex flex-col lg:flex-row gap-[25px] justify-center items-center">
           {/* Image Section */}

@@ -58,10 +58,10 @@ const Review = ({ className }) => {
   }, []);
 
   return (
-    <div className={`${className} bg-[#040404] relative overflow-y-hidden h-screen flex justify-center items-center`}>
-      <Container className="flex flex-wrap">
-        <div className="w-[660px]">
-          <h1 className="text-[60px] not-italic font-bold leading-[normal] capitalize font-roboto  bg-gradient-to-r from-[#126BA2] to-[#FFF] text-transparent bg-clip-text flex items-center justify-center gap-[24px] mb-[35px]">
+    <div className={`${className} bg-[#040404] relative overflow-y-hidden h-screen flex justify-center items-center max-sm:overflow-y-visible`}>
+      <Container className="flex flex-wrap max-sm:w-[100%]">
+        <div className="w-[660px] max-sm:w-[100%] max-sm:flex max-sm:justify-center max-sm:items-center max-sm:flex-col">
+          <h1 className="text-[60px] not-italic font-bold leading-[normal] capitalize font-roboto  bg-gradient-to-r from-[#126BA2] to-[#FFF] text-transparent bg-clip-text flex items-center justify-center gap-[24px] mb-[35px] max-sm:text-[40px]">
             My Client's Stories <img src={Serviceicon} alt="" />
           </h1>
           <p className="text-white text-[25px] not-italic font-medium leading-[normal] max-w-[535px] mb-[40px] font-dm">
@@ -85,16 +85,16 @@ const Review = ({ className }) => {
             </button>
           </div>
         </div>
-        <div className="w-[660px]">
+        <div className="w-[660px] max-sm:w-[100%]">
           <div
             ref={trackRef}
             className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth px-4 -mr-4 
-          [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden max-sm:w-[100%]"
           >
             {clients.map((num) => (
               <div
                 key={num}
-                className="flex-none w-[51%] min-w-[15rem] px-4 snap-start snap-always justify-center items-center overflow-hidden"
+                className="flex-none w-[51%] min-w-[15rem] px-4 snap-start snap-always justify-center items-center overflow-hidden max-sm:w-[50%]"
               >
                 <div className="flex items-center justify-start mx-[10px] mr-[20px] w-full aspect-square rounded-lg bg-[#6c5ce7] text-[#a29bfe] text-3xl font-bold h-[406px] flex-shrink-0 bg-gradient-to-b from-[#041017] via-[#040C11] to-[#040C11] border-[#032796] border p-[14px] flex-col ">
                     <div>

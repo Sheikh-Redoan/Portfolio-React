@@ -18,7 +18,7 @@ import Webdesign2 from "../../assets/Webdesign2.jpg";
 import Webdesign3 from "../../assets/Webdesign3.jpg";
 import Slider from "react-slick";
 
-const Portfolio = ({ className }) => {
+const Portfolio = ({ className,id }) => {
   const [slides, setSlides] = useState([
     {
       imgsrc: profileslide1,
@@ -326,7 +326,7 @@ const Portfolio = ({ className }) => {
   };
 
   return (
-    <div className={`bg-[#040404] ${className}`}>
+    <div id={`${id}`} className={`bg-[#040404] ${className}`}>
       <div>
         <h3 className="font-dm text-[24px] md:text-[30px] font-bold bg-gradient-to-b from-[#1A5AA4] to-[#07D3F3] text-transparent bg-clip-text flex justify-center items-center gap-2 md:gap-[12px]">
           My Portfolio{" "}
